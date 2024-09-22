@@ -1,7 +1,6 @@
 package redis;
 
 import domain.Continent;
-import domain.Language;
 import lombok.Getter;
 import lombok.Setter;
 
