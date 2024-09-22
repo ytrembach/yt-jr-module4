@@ -11,6 +11,13 @@ import java.util.List;
 public class CityDAO {
     final private SessionFactory sessionFactory;
 
+    public City getById(final Integer id) {
+        Query<City> query = sessionFactory.getCurrentSession()
+                .createQuery("select c from City c join fetch c.country where c.id = :ID", City.class);
+        query.setParameter("ID", id);
+        return query.getSingleResult();
+    }
+
     public List<City> getCities(final int offset, final int limit) {
         Query<City> query = sessionFactory.getCurrentSession()
                 .createQuery("select c from City c", City.class);
