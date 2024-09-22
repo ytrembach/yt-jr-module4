@@ -9,7 +9,7 @@ import org.hibernate.annotations.Type;
 @Table(schema = "world", name = "country_language")
 @Getter
 @Setter
-public class CountryLanguage {
+public class Language {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

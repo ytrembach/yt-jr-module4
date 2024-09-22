@@ -2,7 +2,7 @@ import dao.CityDAO;
 import dao.CountryDAO;
 import domain.City;
 import domain.Country;
-import domain.CountryLanguage;
+import domain.Language;
 import lombok.SneakyThrows;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -36,7 +36,7 @@ public class Main {
         return new Configuration()
                 .addAnnotatedClass(City.class)
                 .addAnnotatedClass(Country.class)
-                .addAnnotatedClass(CountryLanguage.class)
+                .addAnnotatedClass(Language.class)
                 .addProperties(properties)
                 .buildSessionFactory();
     }
