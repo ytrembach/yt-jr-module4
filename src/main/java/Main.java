@@ -52,7 +52,7 @@ public class Main {
         final Session session = sessionFactory.getCurrentSession();
 
         session.beginTransaction();
-        final List<Country> countries = countryDAO.getCountries();
+        final List<Country> countries = countryDAO.getCountries(); // fetch countries - optimization
         final int citiesCount = cityDAO.getCitiesCount();
         final int step = 500;
         for (int i = 0; i < citiesCount; i += step) {
