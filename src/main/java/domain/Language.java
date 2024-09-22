@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Type;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(schema = "world", name = "country_language")
 @Getter
@@ -23,4 +25,6 @@ public class Language {
     @Column(name = "is_official", columnDefinition = "BIT")
     @Type(type = "org.hibernate.type.NumericBooleanType")
     private Boolean isOfficial;
+
+    private BigDecimal percentage;
 }
